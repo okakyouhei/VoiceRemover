@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0ff37c32e63f8061eff7f354feadecd3376d1c6cec69a5bfcd6a8759edf03d47
-size 95
+*.pyc
+*.npy
+*.npz
+*.pth
+*.json
+*.log
+*.exe
+
+*.jpg
+*.png
+
+*.wav
+*.m4a
+*.mp3
+*.mp4
+*.flac
+
+*~
+.vscode/
