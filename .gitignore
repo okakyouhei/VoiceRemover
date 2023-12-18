@@ -4,7 +4,6 @@
 *.pth
 *.json
 *.log
-*.exe
 
 *.jpg
 *.png
@@ -16,4 +15,3 @@
 *.flac
 
 *~
-.vscode/
