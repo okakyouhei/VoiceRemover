@@ -1,3 +1,63 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6f857a6858f65d98069602c9efbfd07fb5fc80227685d1306d90f265e95a33ae
-size 1905
+{% extends "layout.html" %} {% block content %}
+<body>
+  <div class="discription">
+    <div class="about">
+      <h3>VoiceRemoverはmp4から人間の音声を取り除きます。</h3>
+    </div>
+    <div class="feature">
+      <h3>
+        私的利用を想定しています。著作権、SNS等への投稿には十分注意してください。
+      </h3>
+    </div>
+  </div>
+  <div class="function">
+    <h2>mp4ファイルをアップロード</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input
+        type="file"
+        id="upload_file"
+        name="upload_file"
+        multiple="multiple"
+        class="form-control"
+      />
+      <!-- <input
+        type="submit"
+        value="送信"
+        class="form-control btn btn-primary"
+      /> -->
+      <br /><br />
+      <h4 class="txt" style="color: red; display: none">
+        ※mp4ファイルが空の状態で送信ボタンを押さないでください。※
+      </h4>
+      <button type="submit" class="btn" style="display: none">送信</button>
+      <br /><br />
+      <div class="loading" style="mix-blend-mode: multiply; display: none">
+        <img
+          src="../static/images/Videotogif-unscreen.gif"
+          style="margin: 0px; width: 150px; height: 200px"
+        />
+        <h4>処理中！</h4>
+        <h4>～tips:左右どっちに回転している？～</h4>
+      </div>
+      <script>
+        $(function () {
+          $(".form-control").change(function () {
+            $(".btn").show();
+          });
+        });
+        $(function () {
+          $(".form-control").change(function () {
+            $(".txt").show();
+          });
+        });
+        $(function () {
+          $(".btn").on("click", function () {
+            $(".loading").show();
+            $(".btn").hide();
+          });
+        });
+      </script>
+    </form>
+  </div>
+</body>
+{% endblock %}

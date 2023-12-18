@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f84e9f072f89ef34481836166ea4a16880e5bf3816e23d41bcaa9b7ea7126441
-size 302
+{% extends "layout.html" %} {% block content %}
+<center>
+  <h2>Voice Removed!</h2>
+  <h5><a href="/">もどる</a></h5>
+  <video controls>
+    <source
+      src="{{ url_for('static', filename='../static/products/completedVideo.mp4')}}"
+      type="video/mp4"
+    />
+  </video>
+</center>
+{% endblock %}
