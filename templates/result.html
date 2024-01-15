@@ -1,0 +1,12 @@
+{% extends "layout.html" %} {% block content %}
+<center>
+  <h2>Voice Removed!</h2>
+  <a href="/">もどる</a>
+  <video controls>
+    <source
+      src="{{ url_for('static', filename='../static/products/completedVideo.mp4')}}"
+      type="video/mp4"
+    />
+  </video>
+</center>
+{% endblock %}

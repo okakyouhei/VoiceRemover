@@ -1,0 +1,58 @@
+{% extends "layout.html" %} {% block content %}
+<body>
+  <div class="discription">
+    <div class="about">
+      <h5>VoiceRemoverはmp4から人間の音声を取り除きます。</h5>
+    </div>
+    <div class="feature">
+      <h5>
+        私的利用を想定しています。著作権、SNS等への投稿には十分注意してください。
+      </h5>
+    </div>
+  </div>
+  <div class="function">
+    <h3>動画ファイルをアップロード</h3>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input
+        type="file"
+        id="upload_file"
+        name="upload_file"
+        multiple="multiple"
+        class="form-control"
+      />
+      <br /><br />
+      <h5 class="txt" style="color: red; display: none">
+        ※mp4ファイルが空の状態で送信ボタンを押さないでください。※
+      </h5>
+      <button type="submit" class="btn" style="display: none">送信</button>
+      <br /><br />
+      <div class="loading" style="mix-blend-mode: multiply; display: none">
+        <img
+          src="../static/images/Videotogif.gif"
+          style="margin: 0px; width: 150px; height: 200px"
+        />
+        <h4>処理中！</h4>
+        <h4>～tips:左右どっちに回転している？～</h4>
+      </div>
+      <script>
+        $(function () {
+          $(".form-control").change(function () {
+            $(".btn").show();
+          });
+        });
+        $(function () {
+          $(".form-control").change(function () {
+            $(".txt").show();
+          });
+        });
+        $(function () {
+          $(".btn").on("click", function () {
+            $(".loading").show();
+            $(".btn").hide();
+          });
+        });
+      </script>
+    </form>
+  </div>
+</body>
+{% endblock %}

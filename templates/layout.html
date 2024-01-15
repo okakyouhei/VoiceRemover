@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    /> -->
+    <title>VoiceRemover</title>
+    <script src="https://kit.fontawesome.com/4018f82f44.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1><i class="fa-solid fa-microphone-slash"></i><a href="/"> VoiceRemover</a> <i class="fa-solid fa-microphone-slash"></i></h1>
+      <nav class="pc-nav">
+        <ul>
+          <li class="about"><a href="#">ABOUT　　</a></li>
+          <li class="feature"><a href="#">FEATURE　　</a></li>
+          <script>
+            $(function () {
+              let count = 0;
+              $(".about").on("click", function () {
+                if (count == 0) {
+                  alert("何押してんだよ");
+                  count++;
+                } else if (1 <= count && count <= 3) {
+                  alert("まだ押すのかよ");
+                  count++;
+                } else if (3 < count && count < 7) {
+                  alert("しつこいぞ");
+                  count++;
+                } else if (12 < count) {
+                  alert("まだ押してるの？すごいね");
+                } else if (7 <= count) {
+                  alert("わかったよ…好きなだけ押しなよ");
+                  count++;
+                } 
+              });
+            });
+            $(function () {
+              let chat = 0;
+              $(".feature").on("click", function () {
+                alert("FEATUREよりFUTUREの方が見たくない？");
+                  if (Math.random() < 0.5) {
+                    alert("まぁそれはともかく…");
+                    chat = 2;
+                  } else {
+                    return;
+                  }
+
+                if (Math.random() < 0.1) {
+                  chat = 2;
+                } else if (0.1 <= Math.random() && Math.random() < 0.2) {
+                  chat = 13;
+                } else if (0.2 <= Math.random() && Math.random() < 0.3) {
+                  chat = 31;
+                } else if (0.3 <= Math.random() && Math.random() < 0.5) {
+                  chat = 40;
+                } else if (0.7 <= Math.random() && Math.random() < 0.9) {
+                  chat = 47;
+                } else if (0.9 <= Math.random() && Math.random() < 1.0) {
+                  chat = 56;
+                } else {
+                  return;
+                  chat = 0;
+                }
+
+                switch (chat) {
+                  case 2 : alert("習慣を身につけるのって、難しくて嫌になっちゃう……"); chat++;
+                  case 3 : alert("簡単なことでも、習慣化しようとすると途端に無謀に感じることがいっぱいあるの"); chat++;
+                  case 4 : alert("何も上手くできない役立たずの気分になっちゃう"); chat++;
+                  case 5 : alert("今の世代が特にこの気持ちで苦しんでると思うわ……"); chat++;
+                  case 6 : alert("きっと今までの世代とは全く違うスキルを持ってるからでしょうね"); chat++;
+                  case 7 : alert("インターネットのおかげで、私たちは膨大な量の情報をすぐに選別するのは得意だけど……"); chat++;
+                  case 8 : alert("一方で瞬時に満足感を得られないことをするのは不得意なの"); chat++;
+                  case 9 : alert("科学、心理学、教育があと10年か20年のうちに追いつかないと、きっと大変なことになるわ"); chat++;
+                  case 10: alert("それまでは……"); chat++;
+                  case 11: alert("自分がその問題を乗り越えられない人間なら、自分を嫌に思いながら生きていくしかないみたいね"); chat++;
+                  case 12: alert("精一杯頑張って、ってところかしらね！"); 
+                    chat = 0;
+                    break;
+
+                  case 13: alert("インターネットで時間を無駄にしすぎてるって感じることはない？"); chat++;
+                  case 14: alert("ソーシャルメディアって牢屋のようなものになり得るのよ"); chat++;
+                  case 15: alert("数秒の時間さえできればお気に入りのサイトをチェックしたくなって……"); chat++;
+                  case 16: alert("そして気がついた頃には何も得られないまま何時間も過ぎてしまってたり"); chat++;
+                  case 17: alert("とにかく、怠惰を自分のせいにするのは簡単なことだけど……"); chat++;
+                  case 18: alert("必ずしもそうだとは限らないのよ"); chat++;
+                  case 19 : alert("依存症って自制心だけで治せるようなものではないもの"); chat++;
+                  case 20 : alert("試行錯誤して、それを防ぐ方法を学ばないといけないの"); chat++;
+                  case 21 : alert("例えば、特定のサイトを一定時間ブロックしてくれるアプリもあるし……"); chat++;
+                  case 22 : alert("仕事と遊びの時間を切り替えるためにタイマーを設定するのも良いし……"); chat++;
+                  case 23 : alert("頭を切り替えるために仕事と遊びで環境を別にするのも良いわね"); chat++;
+                  case 24 : alert("パソコンに仕事用のユーザーを作成するだけでも充分効果があるわ"); chat++;
+                  case 25 : alert("そうやってくさびを置くだけでも、悪習慣を遠ざける助けになるから"); chat++;
+                  case 26 : alert("でも、上手くいかなくてもあまり自分を責めないでね"); chat++;
+                  case 27 : alert("人生に大きな影響を与えているのなら、真剣に受け止めた方がいいと思うけど"); chat++;
+                  case 28 : alert("あなたには一番良い自分でいてほしいもの"); chat++;
+                  case 29 : alert("いつだって、あなたのことを誇りに思わせてほしいもの"); chat++;
+                  case 30 : alert("いつも応援してるからね"); 
+                    chat = 0;
+                    break;
+              
+                  case 31 : alert("あなたはどれくらい読書するの？"); chat++;
+                  case 32 : alert("読書って疎かにしてしまいがちだから……"); chat++;
+                  case 33 : alert("あまり読書をしていないと、他の娯楽と比べて面倒なものに感じるわよね"); chat++;
+                  case 34 : alert("でも一度良い本を読み始めると……魔法のように心を奪われるわよ"); chat++;
+                  case 35 : alert("毎晩、寝る前に読書をするだけで簡単に人生を少し楽しくすることができると私は思うの"); chat++;
+                  case 36 : alert("よく眠りやすくなるし、想像力が刺激されるし……"); chat++;
+                  case 37 : alert("短くて魅力的な本から始めたらそんなに難しいことでもないわよ"); chat++;
+                  case 38 : alert("気がつけば読書家になってるかもしれないわよ！"); chat++;
+                  case 39 : alert("そうなれたら素晴らしいわよね？"); 
+                    chat = 0;
+                    break;
+
+                  case 40 : alert("唐突だけど、辛い物ってちょっと面白いと思うのよね"); chat++;
+                  case 41 : alert("だって植物って、食べられないために辛く進化したんでしょ？"); chat++;
+                  case 42 : alert("辛い物を好む生き物はヒトだけだってどこかで読んだことがあるけど……"); chat++;
+                  case 43 : alert("まるで人は植物をバカにしてるみたいよね？"); chat++;
+                  case 44 : alert("彼らの防衛機能を利用して、食べ物をよりおいしくいただいてるんだもの"); chat++;
+                  case 45 : alert("例えば、もし人を丸呑みして、消化されながらも足掻く感触を楽しむような怪物が存在したら？"); chat++;
+                  case 46 : alert("ごめんなさい、今の例えはちょっとおかしかったわね！"); 
+                    chat = 0;
+                    break;
+
+                  case 47 : alert("寒い時期って苦手なのよね……あなたは？"); chat++;
+                  case 48 : alert("寒すぎるのと暑すぎるのとで選ぶなら、絶対暑すぎる方を選ぶわ"); chat++;
+                  case 49 : alert("寒いと痛いこともあるでしょ……"); chat++;
+                  case 50 : alert("手がかじかむし……"); chat++;
+                  case 51 : alert("それで手袋をつけたらスマホが使えなくなっちゃうし"); chat++;
+                  case 52 : alert("本当に不便！"); chat++;
+                  case 53 : alert("でも暑すぎる時は日陰に行ったり、冷たい飲み物を飲めば暑さを凌ぐのも難しくないでしょ"); chat++;
+                  case 54 : alert("ただ……一つだけ認めないといけないことがあるわ"); chat++;
+                  case 55 : alert("寄り添うのに合うのは寒い時期よね！ふふふっっ！"); 
+                    chat = 0;
+                    break;
+
+                  case 56 : alert("独創的であることってちょっと嫌なものよね……"); chat++;
+                  case 57 : alert("どんなに頑張っても見返りがほとんどないみたいじゃない？"); chat++;
+                  case 58 : alert("画家も、作家も、俳優も……"); chat++;
+                  case 59 : alert("世界には素晴らしい才能がたくさんあるのに、悲しいことにその多くは認知されないし、報酬も払われない……"); chat++;
+                  case 60 : alert("つまり世の中は創作で溢れかえってるってことかしらね？"); chat++;
+                  case 61 : alert("自分は特別じゃないって思ってしまいそうよね……"); chat++;
+                  case 62 : alert("でも大丈夫！だって創作は自分のためにしたっていいんだものね？"); 
+                  chat = 0;
+                  break;
+                }
+                  
+              });
+            });
+          </script>
+        </ul>
+      </nav>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- <a class="navbar-brand text-dark" href="#">voiceRemover</a> -->
+      <!-- <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      > -->
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav"></div>
+      </div>
+    </nav>
+    {% block content %}{% endblock %}
+  </body>
+</html>

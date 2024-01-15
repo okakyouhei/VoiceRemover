@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1.5%;
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ,
+    Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-image: url(../images/background.jpg);
+  text-align: center;
+}
+
+.about h5 {
+  margin-left: 35%;
+  margin-right: 35%;
+  background: linear-gradient(transparent 40%, yellow 60%);
+  line-height: 1.5;
+}
+.feature h5 {
+  margin-left: 30%;
+  margin-right: 30%;
+  background: linear-gradient(transparent 40%, yellow 60%);
+  line-height: 1.5;
+}
+
+.function {
+  text-align: center;
+  background-color: lightblue;
+  padding: 2%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 3%;
+  height: 50%;
+  width: 50%;
+  border-radius: 10%;
+  box-shadow: 0px 0px 0px 5px #4b4b4b;
+}
+
+header h1 {
+  margin-bottom: 2%;
+  padding: 0;
+  font-size: 50px;
+  font-family: "Impact";
+}
+
+a {
+  text-decoration: none;
+  color: #4b4b4b;
+}
+
+ul {
+  text-align: center;
+  list-style: none;
+  margin: 0;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 20%; /* 角丸       */
+  font-size: 16pt; /* 文字サイズ */
+  text-align: center; /* 文字位置   */
+  cursor: pointer; /* カーソル   */
+  padding: 12px 12px; /* 余白       */
+  background: #003300; /* 背景色     */
+  color: #ffff1a; /* 文字色     */
+  line-height: 1em; /* 1行の高さ  */
+  opacity: 1; /* 透明度     */
+  transition: 0.3s; /* なめらか変化 */
+  box-shadow: 4px 4px 3px #666666; /* 影の設定 */
+}
+.btn:hover {
+  box-shadow: none; /* カーソル時の影消去 */
+  opacity: 0.8; /* カーソル時透明度 */
+}
